@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reuben Pra-Obeng | Electrical & Electronics Engineer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      margin-top: 1.2rem;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #00aaff;
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .skills-grid div {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .timeline {
+      border-left: 3px solid #00aaff;
+      padding-left: 1rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline-item h3 {
+      color: #00aaff;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background: #111;
+      color: #ccc;
+      margin-top: 3rem;
+    }
+
+    a {
+      color: #0077cc;
+    }
+
+    a:hover {
+      color: #005999;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Reuben Pra-Obeng</h1>
+      <p class="tagline">
+        Electrical & Electronics Engineer | Process Automation | Safety Management
+      </p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>
+      Dynamic and results-oriented electrical/electronics engineering graduate passionate about process automation,
+      safety systems, and innovation. Adept in leadership, stakeholder collaboration, and data-driven problem-solving.
+    </p>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills & Expertise</h2>
+    <div class="skills-grid">
+      <div>⚙️ Process Automation & Control Systems</div>
+      <div>💡 Electrical Installations</div>
+      <div>🧠 AI Prompt Engineering</div>
+      <div>🖥️ HMI & Ladder Logic</div>
+      <div>🦺 Safety Management & Risk Assessment</div>
+      <div>📊 Project Management (MS Office)</div>
+      <div>🌐 English, Akan, German (Entry Level)</div>
+    </div>
+  </section>
+
+  <section id="experience" class="container">
+    <h2>Professional Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>National Petroleum Authority – National Service Officer (2024–2025)</h3>
+        <p>
+          Conducted inspections and compliance monitoring of petroleum facilities. Improved downstream
+          monitoring efficiency through process digitization and safety collaboration.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Volta Aluminum Company (VALCO) – Intern (2023)</h3>
+        <p>
+          Reduced operational downtime by 30% through HMI diagnostics. Boosted efficiency by 25% via PC-based troubleshooting.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>OLAM Ghana Tomato Paste Factory – Intern (2022)</h3>
+        <p>
+          Calibrated instrumentation and assisted in automating production lines for 210g–2.2kg cans. Ensured
+          safety compliance during live electrical operations.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>BKD Electricals – Technician Assistant (2021)</h3>
+        <p>
+          Installed outlets, fixtures, and switches. Interpreted wiring diagrams and maintained compliance with
+          safety codes during installations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Key Projects</h2>
+    <div class="project-card">
+      <h3>Impact of HV Transmission Lines on Petroleum Pipelines</h3>
+      <p>
+        Assessed EMI effects using CDEGS simulations and proposed IoT/ML-based predictive models for
+        corrosion prevention and pipeline integrity.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Adaptive Solar Tracker (Machine Learning)</h3>
+      <p>
+        Designed and implemented an adaptive solar tracker using reinforcement learning to optimize
+        energy capture based on environmental data.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:kobinapraobeng@gmail.com">kobinapraobeng@gmail.com</a></p>
+    <p>LinkedIn: <a href="http://linkedin.com/in/reuben-kobina-pra-obeng" target="_blank">linkedin.com/in/reuben-kobina-pra-obeng</a></p>
+    <p>Phone: +233 27 940 2121</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Reuben Pra-Obeng | Built with minimalism & precision ⚡</p>
+  </footer>
+</body>
+</html>
