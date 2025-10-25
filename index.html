@@ -1,229 +1,336 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reuben Pra-Obeng | Electrical & Electronics Engineer</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Inter", Arial, sans-serif;
-    }
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Reuben Pra-Obeng — Electrical & Electronics Engineer</title>
+<meta name="description" content="Reuben Pra-Obeng — Electrical/Electronics Engineer. Process automation, safety management, HMI & ladder logic." />
+<style>
+  :root{
+    --accent:#0aa7f0;
+    --bg:#ffffff;
+    --muted:#6b6b6b;
+    --text:#0b0b0b;
+    --soft:#f5f6f8;
+    --max-w:1100px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:var(--text);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
 
-    body {
-      background-color: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
+  /* Layout */
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:48px 24px;}
+  header.site{
+    display:grid;
+    grid-template-columns: 1fr 420px;
+    gap:36px;
+    align-items:center;
+    min-height:68vh;
+  }
 
-    header {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 2.5rem 1rem;
-    }
+  /* Left column: menu, name, intro */
+  .left{
+    padding-right:8px;
+  }
 
-    header h1 {
-      font-size: 2.2rem;
-      letter-spacing: 0.5px;
-    }
+  /* top nav like example */
+  .topnav{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    justify-content:flex-start;
+    font-size:13px;
+    color:var(--muted);
+    margin-bottom:20px;
+  }
+  .topnav a{color:var(--muted);text-decoration:none}
+  .topnav a:hover{color:var(--text)}
 
-    .tagline {
-      font-size: 1rem;
-      color: #ccc;
-      margin-top: 0.5rem;
-    }
+  /* Big split name */
+  .name-wrap{
+    display:flex;
+    gap:28px;
+    align-items:flex-start;
+  }
+  .large-name{
+    font-weight:700;
+    font-size:92px;
+    line-height:0.9;
+    letter-spacing:8px;
+    color:#0b0b0b;
+    margin:0;
+    white-space:nowrap;
+  }
+  /* second column of the name stacked */
+  .surname{
+    font-weight:700;
+    font-size:92px;
+    line-height:0.9;
+    letter-spacing:10px;
+    margin:0;
+  }
 
-    nav {
-      margin-top: 1.2rem;
-    }
+  .subtitle{
+    margin-top:18px;
+    font-size:18px;
+    color:var(--muted);
+    max-width:620px;
+  }
 
-    nav a {
-      color: #ddd;
-      text-decoration: none;
-      margin: 0 12px;
-      font-size: 0.95rem;
-      transition: color 0.3s;
-    }
+  /* right column: photo card */
+  .photo-card{
+    background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    border-radius:10px;
+    padding:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:320px;
+    box-shadow: 0 10px 30px rgba(16,24,40,0.06);
+    position:relative;
+    overflow:hidden;
+  }
+  .photo-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:8px;
+    display:block;
+    max-height:460px;
+  }
+  /* placeholder if no image */
+  .photo-placeholder{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-size:14px;
+    border:2px dashed #e7eef7;
+    padding:24px;
+    border-radius:8px;
+  }
 
-    nav a:hover {
-      color: #00aaff;
-    }
+  /* small info block under hero */
+  .quick{
+    display:flex;
+    gap:20px;
+    margin-top:28px;
+    flex-wrap:wrap;
+    color:var(--muted);
+    font-size:14px;
+  }
+  .pill{background:var(--soft);padding:10px 14px;border-radius:8px}
 
-    .container {
-      max-width: 900px;
-      margin: 2.5rem auto;
-      padding: 0 1rem;
-    }
+  /* sections */
+  section{padding:64px 0;border-top:1px solid #f1f3f5}
+  h2{font-size:18px;color:var(--text);margin-bottom:12px;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:6px}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-top:18px;
+  }
+  .card{
+    background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 20px rgba(8,15,30,0.04);
+  }
+  .skills{
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .skill-pill{display:inline-block;padding:8px 10px;border-radius:999px;background:var(--soft);color:var(--muted);font-size:13px;margin:6px 6px 0 0}
 
-    h2 {
-      border-bottom: 2px solid #00aaff;
-      display: inline-block;
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-    }
+  .timeline .item{margin-bottom:18px}
+  .timeline .item h3{margin:0;font-size:15px;color:var(--accent)}
+  .timeline .item p{margin:6px 0;color:var(--muted);font-size:14px}
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
+  /* Projects */
+  .projects{display:flex;flex-direction:column;gap:12px}
+  .project-title{font-weight:600;margin-bottom:6px}
+  .muted{color:var(--muted)}
 
-    .skills-grid div {
-      background: #fff;
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
+  footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px}
 
-    .timeline {
-      border-left: 3px solid #00aaff;
-      padding-left: 1rem;
-    }
+  /* responsiveness */
+  @media (max-width:980px){
+    header.site{grid-template-columns:1fr;min-height:unset}
+    .large-name,.surname{font-size:64px}
+    .photo-card{min-height:260px}
+    .grid{grid-template-columns:1fr}
+  }
+  @media (max-width:520px){
+    .large-name,.surname{font-size:44px}
+    .subtitle{font-size:15px}
+    .topnav{font-size:12px;gap:10px}
+  }
 
-    .timeline-item {
-      margin-bottom: 1.5rem;
-    }
-
-    .timeline-item h3 {
-      color: #00aaff;
-      font-size: 1.05rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .project-card {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background: #111;
-      color: #ccc;
-      margin-top: 3rem;
-    }
-
-    a {
-      color: #0077cc;
-    }
-
-    a:hover {
-      color: #005999;
-    }
-  </style>
+  /* small interactive link styles */
+  a.cta{
+    display:inline-block;margin-top:16px;padding:10px 14px;border-radius:8px;border:1px solid rgba(10,167,240,0.12);color:var(--accent);text-decoration:none;font-weight:600;
+  }
+  a.cta:hover{background:rgba(10,167,240,0.06)}
+</style>
 </head>
-
 <body>
-  <header>
-    <div class="container">
-      <h1>Reuben Pra-Obeng</h1>
-      <p class="tagline">
-        Electrical & Electronics Engineer | Process Automation | Safety Management
-      </p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="wrap">
 
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>
-      Dynamic and results-oriented electrical/electronics engineering graduate passionate about process automation,
-      safety systems, and innovation. Adept in leadership, stakeholder collaboration, and data-driven problem-solving.
-    </p>
-  </section>
+    <header class="site" role="banner">
+      <div class="left">
+        <div class="topnav" aria-hidden="true">
+          <a href="#about">Over mij</a>
+          <a href="#experience">Ervaringen</a>
+          <a href="#projects">Projecten</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-  <section id="skills" class="container">
-    <h2>Skills & Expertise</h2>
-    <div class="skills-grid">
-      <div>⚙️ Process Automation & Control Systems</div>
-      <div>💡 Electrical Installations</div>
-      <div>🧠 AI Prompt Engineering</div>
-      <div>🖥️ HMI & Ladder Logic</div>
-      <div>🦺 Safety Management & Risk Assessment</div>
-      <div>📊 Project Management (MS Office)</div>
-      <div>🌐 English, Akan, German (Entry Level)</div>
-    </div>
-  </section>
+        <div class="name-wrap" aria-hidden="false">
+          <!-- Large split name -->
+          <div style="display:flex;flex-direction:column;justify-content:flex-start;">
+            <h1 class="large-name">Reuben</h1>
+            <p style="height:8px"></p>
+          </div>
+          <div style="display:flex;flex-direction:column;justify-content:flex-start;">
+            <h1 class="surname">Pra-Obeng</h1>
+          </div>
+        </div>
 
-  <section id="experience" class="container">
-    <h2>Professional Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>National Petroleum Authority – National Service Officer (2024–2025)</h3>
-        <p>
-          Conducted inspections and compliance monitoring of petroleum facilities. Improved downstream
-          monitoring efficiency through process digitization and safety collaboration.
+        <p class="subtitle">
+          Electrical & Electronics Engineer focused on process automation, safety management, HMI & ladder
+          logic. Experience in downstream petroleum inspection, plant automation and instrumentation calibration.
         </p>
+
+        <div class="quick" aria-hidden="true">
+          <div class="pill">BSc Electrical/Electronics — KNUST (2024)</div>
+          <div class="pill">Advanced Diploma — Occupational Safety & Health</div>
+          <div class="pill">Ghana • Phone: +233 27 940 2121</div>
+        </div>
       </div>
 
-      <div class="timeline-item">
-        <h3>Volta Aluminum Company (VALCO) – Intern (2023)</h3>
-        <p>
-          Reduced operational downtime by 30% through HMI diagnostics. Boosted efficiency by 25% via PC-based troubleshooting.
-        </p>
+      <div class="photo-card" aria-hidden="true">
+        <!-- If you have IMG_0149.png in same directory, it will display. Otherwise show placeholder -->
+        <img src="IMG_0149.png" alt="Reuben Pra-Obeng photo" onerror="this.style.display='none';document.querySelector('.photo-placeholder').style.display='flex'">
+        <div class="photo-placeholder" style="display:none">
+          Photo (place <code>IMG_0149.png</code> next to this file to show)
+        </div>
       </div>
+    </header>
 
-      <div class="timeline-item">
-        <h3>OLAM Ghana Tomato Paste Factory – Intern (2022)</h3>
-        <p>
-          Calibrated instrumentation and assisted in automating production lines for 210g–2.2kg cans. Ensured
-          safety compliance during live electrical operations.
-        </p>
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <div class="grid">
+        <div class="card">
+          <p><strong>Career objective</strong></p>
+          <p class="muted">Dynamic and results-oriented electrical/electronics engineering graduate seeking to contribute to a reputable organization by leveraging strengths in process automation, control systems, safety management, and leadership. Adept at team coordination, process improvement, and data-driven problem solving.</p>
+          <a class="cta" href="#contact">Get in touch</a>
+        </div>
+        <div class="card">
+          <p><strong>Core competencies</strong></p>
+          <div class="skills">
+            <div>
+              <span class="skill-pill">Process automation</span>
+              <span class="skill-pill">HMI & Ladder Logic</span>
+              <span class="skill-pill">Electrical installations</span>
+              <span class="skill-pill">Safety management</span>
+              <span class="skill-pill">Instrumentation calibration</span>
+              <span class="skill-pill">AI Prompt Engineering</span>
+            </div>
+            <p class="muted" style="margin-top:10px">Languages: English, Akan, German (entry level)</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="timeline-item">
-        <h3>BKD Electricals – Technician Assistant (2021)</h3>
-        <p>
-          Installed outlets, fixtures, and switches. Interpreted wiring diagrams and maintained compliance with
-          safety codes during installations.
-        </p>
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="item card">
+          <h3>National Petroleum Authority — National Service Officer (Oct 2024 – Oct 2025)</h3>
+          <p>Inspections and monitoring of petroleum facilities; compliance evaluation; quality & safety monitoring, LPG oversight, reporting, and stakeholder engagement.</p>
+        </div>
+
+        <div class="item card">
+          <h3>Volta Aluminum Company (VALCO) — Intern (Sep–Dec 2023)</h3>
+          <p>Worked with HMI and ladder logic to diagnose issues, reduced downtime by ~30% and improved troubleshooting efficiency via PC-based diagnostics.</p>
+        </div>
+
+        <div class="item card">
+          <h3>OLAM Ghana Tomato Paste Factory — Intern (Sep–Dec 2022)</h3>
+          <p>Recalibrated sensors, aided design/installation of automation panels for canning lines, performed safety-aware live work.</p>
+        </div>
+
+        <div class="item card">
+          <h3>BKD Electricals — Electrical Technician Assistant (Mar–Jul 2020)</h3>
+          <p>Installed wiring and fixtures, interpreted schematics and tested systems prior to commissioning.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="container">
-    <h2>Key Projects</h2>
-    <div class="project-card">
-      <h3>Impact of HV Transmission Lines on Petroleum Pipelines</h3>
-      <p>
-        Assessed EMI effects using CDEGS simulations and proposed IoT/ML-based predictive models for
-        corrosion prevention and pipeline integrity.
-      </p>
-    </div>
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <div class="project-title">Impact of HV Transmission Lines on Petroleum Pipelines</div>
+          <div class="muted">Assessed EMI effects using CDEGS (HIFREQ) simulations and proposed IoT/ML-based predictive monitoring & mitigation strategies.</div>
+        </div>
 
-    <div class="project-card">
-      <h3>Adaptive Solar Tracker (Machine Learning)</h3>
-      <p>
-        Designed and implemented an adaptive solar tracker using reinforcement learning to optimize
-        energy capture based on environmental data.
-      </p>
-    </div>
-  </section>
+        <div class="card">
+          <div class="project-title">Adaptive Solar Tracker (Machine Learning)</div>
+          <div class="muted">Designed reinforcement learning algorithms to dynamically orient PV panels for optimized energy capture based on environment data.</div>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact" class="container">
-    <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:kobinapraobeng@gmail.com">kobinapraobeng@gmail.com</a></p>
-    <p>LinkedIn: <a href="http://linkedin.com/in/reuben-kobina-pra-obeng" target="_blank">linkedin.com/in/reuben-kobina-pra-obeng</a></p>
-    <p>Phone: +233 27 940 2121</p>
-  </section>
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid">
+        <div class="card">
+          <p><strong>Email</strong></p>
+          <p class="muted"><a href="mailto:kobinapraobeng@gmail.com">kobinapraobeng@gmail.com</a></p>
+          <p><strong>LinkedIn</strong></p>
+          <p class="muted"><a href="https://linkedin.com/in/reuben-kobina-pra-obeng" target="_blank" rel="noopener">linkedin.com/in/reuben-kobina-pra-obeng</a></p>
+        </div>
+        <div class="card">
+          <p><strong>Phone</strong></p>
+          <p class="muted">+233 27 940 2121</p>
+          <p style="margin-top:12px"><strong>Referees</strong></p>
+          <p class="muted">Available upon request</p>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Reuben Pra-Obeng | Built with minimalism & precision ⚡</p>
-  </footer>
+    <footer>
+      © <span id="year"></span> Reuben Pra-Obeng — Built with clarity & precision
+    </footer>
+
+  </div>
+
+<script>
+  // set year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Smooth in-page scrolling for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      e.preventDefault();
+      const id=a.getAttribute('href').slice(1);
+      const el=document.getElementById(id);
+      if(!el) return;
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      // update location hash without jump
+      history.pushState(null,'', '#'+id);
+    });
+  });
+</script>
 </body>
 </html>
